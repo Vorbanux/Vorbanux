@@ -4,32 +4,6 @@ import requests
 STEAM_API_KEY = os.getenv("STEAM_API_KEY")
 STEAM_ID = os.getenv("STEAM_ID")
 
-def update_readme(status_html):
-    with open("README.md", "r", encoding="utf-8") as f:
-        readme = f.read()
-
-    start_marker = "<!-- STEAM_STATUS:START -->"
-    end_marker = "<!-- STEAM_STATUS:END -->"
-    
-    start_pos = readme.find(start_marker)
-    end_pos = readme.find(end_marker)
-    
-    if start_pos != -1 and end_pos != -1:
-        new_readme = (
-            readme[:start_pos + len(start_marker)] 
-            + "\n" + status_html + "\n" + 
-            readme[end_pos:]
-        )
-        with open("README.md", "w", encoding="utf-8") as f:
-            f.write(new_readme)
-    else:
-        print("Маркеры не найдены в README.md")
-
-if __name__ == "__main__":
-    if STEAM_API_KEY and STEAM_ID:
-        status_html = get_steam_profile_and_game()
-        update_readme(status_html)
-
 def get_steam_profile_and_game():
     profile_url = f"http://steampowered.com{STEAM_API_KEY}&steamids={STEAM_ID}"
     game_url = f"http://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
@@ -86,4 +60,30 @@ def get_steam_profile_and_game():
   </tr>
 </table>
 """
+
+def update_readme(status_html):
+    with open(README.md", "r", encoding="utf-8") as f:
+        readme = f.read()
+
+    start_marker = "<!-- STEAM_STATUS:START -->"
+    end_marker = "<!-- STEAM_STATUS:END -->"
+    
+    start_pos = readme.find(start_marker)
+    end_pos = readme.find(end_marker)
+    "
+    if start_pos != -1 and end_pos != -1:
+        new_readme = (
+            readme[:start_pos + len(start_marker)] 
+            + "\n" + status_html + "\n" + 
+            readme[end_pos:]
+        )
+        with open("README.md", "w", encoding="utf-8") as f:
+            f.write(new_readme)
+    else:
+        print("Маркеры не найдены в README.md")
+
+if __name__ == "__main__":
+    if STEAM_API_KEY and STEAM_ID:
+        status_html = get_steam_profile_and_game()
+        update_readme(status_html)
 
