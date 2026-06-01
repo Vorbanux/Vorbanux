@@ -9,14 +9,15 @@ def get_Steam_data():
   try:
     response = requests.get(url).json()
     if "games" in response.get("response", {}):
-      game = response["response"]["games"][0] 
-      game_name = game["name"]
-      playtime_2weeks = round(game["playtime_2weeks"] / 60, 1) 
-      
-      return f"""
-<div align="center">
-  <span>🎮 <b>Сейчас играет или недавно играл в:</b> {game_name} ({playtime_2weeks} ч. за последние 2 недели)</span>
-</div>
+            game = response["response"]["games"] 
+            game_name = game["name"]
+            playtime_2weeks = round(game["playtime_2weeks"] / 60, 1) 
+            
+            # Возвращаем простой HTML, который гарантированно пропустит защита GitHub
+            return f"""
+        <font color="#8b929a" size="3">В сети и играет в:</font><br>
+        <font color="#ffffff" size="4"><b>🕹️ {game_name}</b></font><br>
+        <font color="#54585f" size="2">{playtime_2weeks} ч. за последние 2 недели</font>
 """
   except Exception as e:
     print(f"Ошибка при запросе к Steam API: {e}")
