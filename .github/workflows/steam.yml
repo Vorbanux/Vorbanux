@@ -22,8 +22,8 @@ jobs:
 
     - name: Run script
       env:
-        STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-        STEAM_ID: ${{ secrets.STEAM_ID }}
+        STEAM_API_KEY: ${{ secrets.MY_STEAM_API }}
+        STEAM_ID: ${{ secrets.MY_STEAM_64ID }}
       run: python auto_update.py
 
     - name: Commit and push changes
