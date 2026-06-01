@@ -22,6 +22,8 @@ def update_readme(status_html):
         )
         with open("README.md", "w", encoding="utf-8") as f:
             f.write(new_readme)
+    else:
+        print("Маркеры не найдены в README.md")
 
 if __name__ == "__main__":
     if STEAM_API_KEY and STEAM_ID:
@@ -29,12 +31,9 @@ if __name__ == "__main__":
         update_readme(status_html)
 
 def get_steam_profile_and_game():
-    # 1. Ссылка для получения базовой инфы профиля (Имя, Аватар, Онлайн-статус)
-    profile_url = f"http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={STEAM_API_KEY}&steamids={STEAM_ID}"
-    # 2. Ссылка для получения текущей/недавней игры
+    profile_url = f"http://steampowered.com{STEAM_API_KEY}&steamids={STEAM_ID}"
     game_url = f"http://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
     
-    # Дефолтные значения на случай сбоя
     username = "Vorbanux"
     avatar_url = "https://github.com"
     status_text = "offline"
@@ -42,28 +41,24 @@ def get_steam_profile_and_game():
     game_info_html = "Сейчас не в сети или играет во что-то секретное 🤫"
 
     try:
-        # Запрашиваем информацию о профиле
         profile_res = requests.get(profile_url).json()
         players = profile_res.get("response", {}).get("players", [])
         if players:
             player = players[0]
             username = player.get("personaname", username)
-            avatar_url = player.get("avatarfull", avatar_url) # Берем самую большую аватарку 184x184px
+            avatar_url = player.get("avatarfull", avatar_url)
             
-            # personastate: 0 - Офлайн, 1 - Онлайн, 2 - Занят, 3 - Отошел...
             state = player.get("personastate", 0)
-            # Если игрок запустил игру, поле "gameextrainfo" появляется автоматически
             if "gameextrainfo" in player:
                 status_text = "в игре"
-                status_color = "#90ba3c" # Фирменный зеленый цвет Steam для тех кто в игре
+                status_color = "#90ba3c"
             elif state > 0:
                 status_text = "в сети"
-                status_color = "#57cbde" # Голубой цвет для тех, кто просто онлайн
+                status_color = "#57cbde"
             else:
                 status_text = "не в сети"
                 status_color = "#8b929a"
 
-        # Запрашиваем информацию об игре
         game_res = requests.get(game_url).json()
         if "games" in game_res.get("response", {}):
             game = game_res["response"]["games"][0]
@@ -74,15 +69,12 @@ def get_steam_profile_and_game():
     except Exception as e:
         print(f"Ошибка API: {e}")
 
-    # Собираем красивую верстку, которая вставится в таблицу README
     return f"""
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <!-- Аватарка из Steam -->
     <td width="120" valign="top">
       <img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" />
     </td>
-    <!-- Имя, Статус и Игра -->
     <td valign="top">
       <font size="5" color="#ffffff"><b>{username}</b></font> 
       &nbsp;&nbsp;
