@@ -12,12 +12,13 @@ def get_steam_profile_and_game():
     avatar_url = "steam_avatar.jpg"
     status_text = "offline"
     status_color = "#8b929a"
-    game_info_html = "Сейчас не в сети"
+    game_info_html = "Не известно"
 
     try:
         profile_res = requests.get(profile_url).json()
         players = profile_res.get("response", {}).get("players", [])
-        if players:
+        
+        if isinstance(players, list) and len(players) > 0:
             player = players[0]
             username = player.get("personaname", username)
             avatar_url = player.get("avatarfull", avatar_url)
@@ -34,14 +35,19 @@ def get_steam_profile_and_game():
                 status_color = "#8b929a"
 
         game_res = requests.get(game_url).json()
-        if "games" in game_res.get("response", {}):
-            game = game_res["response"]["games"][0]
-            game_name = game["name"]
-            playtime_2weeks = round(game["playtime_2weeks"] / 60, 1)
+        games = game_res.get("response", {}).get("games", [])
+        
+        if isinstance(games, list) and len(games) > 0:
+            game = games[0]
+            game_name = game.get("name", "Игру")
+            playtime_2weeks = round(game.get("playtime_2weeks", 0) / 60, 1)
             game_info_html = f"🕹️ <b>{game_name}</b> ({playtime_2weeks} ч. за 2 недели)"
 
     except Exception as e:
         print(f"Ошибка API: {e}")
+
+    if avatar_url.startswith("http://"):
+        avatar_url = avatar_url.replace("http://", "https://")
 
     html = '<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>'
     html += f'<td width="120" valign="top"><img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" onerror="this.onerror=null;this.src=\'steam_avatar.jpg\';" /></td>'
