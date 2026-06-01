@@ -5,21 +5,28 @@ STEAM_API_KEY = os.getenv("STEAM_API_KEY")
 STEAM_ID = os.getenv("STEAM_ID")
 
 def get_steam_profile_and_game():
-    profile_url = f"https://steampowered.com{STEAM_API_KEY}&steamids={STEAM_ID}"
-    game_url = f"https://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
+    # Собираем ссылки по кусочкам, чтобы исключить любые склейки букв
+    base_url = "https://steampowered.com"
+    
+    profile_path = "/ISteamUser/GetPlayerSummaries/v0002/"
+    profile_url = f"{base_url}{profile_path}?key={STEAM_API_KEY}&steamids={STEAM_ID}"
+    
+    game_path = "/IPlayerService/GetRecentlyPlayedGames/v0001/"
+    game_url = f"{base_url}{game_path}?key={STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
     
     username = "Vorbanux"
     avatar_url = "steam_avatar.jpg"
     status_text = "offline"
     status_color = "#8b929a"
-    game_info_html = "Не известно"
+    game_info_html = "Сейчас не в сети или играет во что-то секретное 🤫"
 
     try:
+        # 1. Запрос профиля
         profile_res = requests.get(profile_url).json()
         players = profile_res.get("response", {}).get("players", [])
         
         if isinstance(players, list) and len(players) > 0:
-            player = players[0]
+            player = players[0]  # Извлекаем первый элемент списка профилей
             username = player.get("personaname", username)
             avatar_url = player.get("avatarfull", avatar_url)
             
@@ -34,12 +41,12 @@ def get_steam_profile_and_game():
                 status_text = "не в сети"
                 status_color = "#8b929a"
 
+        # 2. Запрос запущенной игры
         game_res = requests.get(game_url).json()
         games = game_res.get("response", {}).get("games", [])
-        print("ОТВЕТ СТИМА:", profile_res)
         
         if isinstance(games, list) and len(games) > 0:
-            game = games[0]
+            game = games[0]  # Извлекаем первую (последнюю запущенную) игру
             game_name = game.get("name", "Игру")
             playtime_2weeks = round(game.get("playtime_2weeks", 0) / 60, 1)
             game_info_html = f"🕹️ <b>{game_name}</b> ({playtime_2weeks} ч. за 2 недели)"
@@ -50,6 +57,7 @@ def get_steam_profile_and_game():
     if avatar_url.startswith("http://"):
         avatar_url = avatar_url.replace("http://", "https://")
 
+    # Сборка HTML
     html = '<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>'
     html += f'<td width="120" valign="top"><img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" onerror="this.onerror=null;this.src=\'steam_avatar.jpg\';" /></td>'
     html += f'<td valign="top"><font size="5" color="#ffffff"><b>{username}</b></font>&nbsp;&nbsp;<font size="2" color="{status_color}">● {status_text}</font>'
