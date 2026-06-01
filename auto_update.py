@@ -18,7 +18,7 @@ def get_steam_profile_and_game():
     avatar_url = "steam_avatar.jpg"
     status_text = "offline"
     status_color = "#8b929a"
-    game_info_html = "Сейчас не в сети или играет во что-то секретное 🤫"
+    game_info_html = "не известно"
 
     try:
         # 1. Запрос профиля
