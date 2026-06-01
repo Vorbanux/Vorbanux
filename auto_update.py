@@ -62,7 +62,7 @@ def get_steam_profile_and_game():
 """
 
 def update_readme(status_html):
-    with open(README.md", "r", encoding="utf-8") as f:
+    with open("README.md", "r", encoding="utf-8") as f:
         readme = f.read()
 
     start_marker = "<!-- STEAM_STATUS:START -->"
