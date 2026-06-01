@@ -36,6 +36,7 @@ def get_steam_profile_and_game():
 
         game_res = requests.get(game_url).json()
         games = game_res.get("response", {}).get("games", [])
+        print("ОТВЕТ СТИМА:", profile_res)
         
         if isinstance(games, list) and len(games) > 0:
             game = games[0]
