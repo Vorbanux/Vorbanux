@@ -10,7 +10,7 @@
         <font color="#66c0f4" size="2"><b>Steam</b></font>
         <br><br>
         <!-- STEAM_STATUS:START -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="120" valign="top"><img src="steam_avatar.jpg" width="100" height="100" style="border: 2px solid #8b929a; border-radius: 4px;" onerror="this.onerror=null;this.src='steam_avatar.jpg';" /></td><td valign="top"><font size="5" color="#ffffff"><b>Vorbanux</b></font>&nbsp;&nbsp;<font size="2" color="#8b929a">● offline</font><br><br><font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br><font size="3" color="#66c0f4">Сейчас не в сети</font></td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="120" valign="top"><img src="steam_avatar.jpg" width="100" height="100" style="border: 2px solid #8b929a; border-radius: 4px;" onerror="this.onerror=null;this.src='steam_avatar.jpg';" /></td><td valign="top"><font size="5" color="#ffffff"><b>Vorbanux</b></font>&nbsp;&nbsp;<font size="2" color="#8b929a">● offline</font><br><br><font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br><font size="3" color="#66c0f4">Не известно</font></td></tr></table>
 <!-- STEAM_STATUS:END -->
       </td>
     </tr>
