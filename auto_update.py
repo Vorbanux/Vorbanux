@@ -1,8 +1,8 @@
 import os
 import requests
 
-STEAM_API_KEY = os.getenv("STEAM_API_KEY")
-STEAM_ID = os.getenv("STEAM_ID")
+STEAM_API_KEY = os.getenv("MY_STEAM_API")
+STEAM_ID = os.getenv("MY_STEAM_64ID")
 
 def get_steam_profile_and_game():
     base_url = "https://steampowered.com"
