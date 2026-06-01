@@ -5,16 +5,10 @@
 ### 🛠️ Мой стек технологий
 * **Бэкенд:** Python
 * **Фронтенд:** HTML, CSS, JavaScript
-* **Геймдев:** Lua, Unreal Engine 5 (C++ / Blueprints), Roblox Studio
+* **Геймдев:** Lua, Unreal Engine 5 (C++ / Blueprints)
 
 ---
 
 ### 🎮 Моя активность в Steam
 <!-- STEAM_STATUS:START -->
-<!-- Скрипт автоматически заменит эту строку на ваш статус из Steam -->
 <!-- STEAM_STATUS:END -->
-
----
-
-### 📂 Мои проекты
-*Здесь в будущем вы сможете разместить ссылки на ваши лучшие репозитории.*
