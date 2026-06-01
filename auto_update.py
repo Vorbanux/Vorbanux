@@ -9,7 +9,7 @@ def get_steam_profile_and_game():
     game_url = f"http://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
     
     username = "Vorbanux"
-    avatar_url = "https://"
+    avatar_url = "steam_avatar.jpg"
     status_text = "offline"
     status_color = "#8b929a"
     game_info_html = "Сейчас не в сети"
@@ -44,7 +44,7 @@ def get_steam_profile_and_game():
         print(f"Ошибка API: {e}")
 
     html = '<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>'
-    html += f'<td width="120" valign="top"><img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" onerror="this.onerror=null;this.src=\'https://github.com\';" /></td>'
+    html += f'<td width="120" valign="top"><img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" onerror="this.onerror=null;this.src=\'steam_avatar.jpg\';" /></td>'
     html += f'<td valign="top"><font size="5" color="#ffffff"><b>{username}</b></font>&nbsp;&nbsp;<font size="2" color="{status_color}">● {status_text}</font>'
     html += f'<br><br><font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br><font size="3" color="#66c0f4">{game_info_html}</font></td>'
     html += '</tr></table>'
