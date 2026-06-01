@@ -5,7 +5,7 @@ STEAM_API_KEY = os.getenv("STEAM_API_KEY", "").strip()
 STEAM_ID = os.getenv("STEAM_ID", "").strip()
 
 def get_steam_profile_and_game():
-    base_url = "https://steampowered.com"
+    base_url = "https://api.steampowered.com"
     
     profile_path = "/ISteamUser/GetPlayerSummaries/v0002/"
     profile_url = f"{base_url}{profile_path}?key={STEAM_API_KEY}&steamids={STEAM_ID}"
