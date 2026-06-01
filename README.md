@@ -1,26 +1,13 @@
 <div align="center">
-  <img src="https://githubusercontent.com" width="100%" alt="Banner" />
+  <img src="image.png" width="100%" alt="Banner" />
   <br>
+  <h1>Backend Engineer & Game Developer</h1>
 
-  <h1>Vorbanux</h1>
-  <p>Backend Engineer & Game Developer</p>
-
-  <a href="https://steamcommunity.com" target="_blank">
-    <img src="https://shields.io" alt="Steam" />
-  </a>
-  &nbsp;
-  <a href="https://discord.com" target="_blank">
-    <img src="https://shields.io" alt="Discord" />
-  </a>
-
-  <br><br>
-  <hr width="50%">
-  <br>
 
   <table border="1" cellspacing="0" cellpadding="15" width="500" style="border-color: #3a3f47;">
     <tr>
       <td bgcolor="#171a21" align="left">
-        <font color="#66c0f4" size="2"><b>НЕДАВНЯЯ АКТИВНОСТЬ В STEAM</b></font>
+        <font color="#66c0f4" size="2"><b>Steam</b></font>
         <br><br>
         <!-- STEAM_STATUS:START -->
         <font color="#8b929a">⏳ Ожидание первого запуска скрипта...</font>
@@ -34,15 +21,17 @@
   <br>
 
 </div>
-
-<table width="100%" border="0" cellpadding="10">
+<table width="100%" border="0" cellpadding="10" align="center">
   <tr>
     <td width="50%" bgcolor="#1f232a" valign="top">
-      <h3><font color="#66c0f4">🚀 Веб-разработка</font></h3>
+      <h3><font color="#66c0f4">🚀  Языки Программирования</font></h3>
       <ul>
-        <li><b>Python</b> (FastAPI, Flask, Requests)</li>
-        <li><b>JavaScript</b> (ES6+)</li>
-        <li>HTML5 / CSS3 / Семантическая верстка</li>
+        <li><b>Python</b></li>
+        <li><b>Lua</b></li>
+        <li><b>C++</b></li>
+        <li><b>JavaScript</b></li>
+        <li><b>HTML5</b></li>
+        <li><b>CSS3</b></li>
       </ul>
     </td>
     <td width="50%" bgcolor="#1f232a" valign="top">
