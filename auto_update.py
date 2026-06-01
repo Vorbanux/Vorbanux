@@ -43,23 +43,12 @@ def get_steam_profile_and_game():
     except Exception as e:
         print(f"Ошибка API: {e}")
 
-    return f"""
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-    <td width="120" valign="top">
-      <img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" />
-    </td>
-    <td valign="top">
-      <font size="5" color="#ffffff"><b>{username}</b></font> 
-      &nbsp;&nbsp;
-      <font size="2" color="{status_color}">● {status_text}</font>
-      <br><br>
-      <font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br>
-      <font size="3" color="#66c0f4">{game_info_html}</font>
-    </td>
-  </tr>
-</table>
-"""
+    html = '<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>'
+    html += f'<td width="120" valign="top"><img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" /></td>'
+    html += f'<td valign="top"><font size="5" color="#ffffff"><b>{username}</b></font>&nbsp;&nbsp;<font size="2" color="{status_color}">● {status_text}</font>'
+    html += f'<br><br><font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br><font size="3" color="#66c0f4">{game_info_html}</font></td>'
+    html += '</tr></table>'
+    return html
 
 def update_readme(status_html):
     with open("README.md", "r", encoding="utf-8") as f:
@@ -70,13 +59,9 @@ def update_readme(status_html):
     
     start_pos = readme.find(start_marker)
     end_pos = readme.find(end_marker)
-    "
+    
     if start_pos != -1 and end_pos != -1:
-        new_readme = (
-            readme[:start_pos + len(start_marker)] 
-            + "\n" + status_html + "\n" + 
-            readme[end_pos:]
-        )
+        new_readme = readme[:start_pos + len(start_marker)] + "\n" + status_html + "\n" + readme[end_pos:]
         with open("README.md", "w", encoding="utf-8") as f:
             f.write(new_readme)
     else:
@@ -86,4 +71,3 @@ if __name__ == "__main__":
     if STEAM_API_KEY and STEAM_ID:
         status_html = get_steam_profile_and_game()
         update_readme(status_html)
-
