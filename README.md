@@ -1,14 +1,10 @@
 <div align="center">
-
-  <!-- 1. ВЕРХНИЙ БАННЕР -->
-  <img src="https://vercel.app" width="100%" alt="Banner" />
+  <img src="https://githubusercontent.com" width="100%" alt="Banner" />
   <br>
 
-  <!-- 2. ИМЯ И ПОДПИСЬ -->
   <h1>Vorbanux</h1>
   <p>Backend Engineer & Game Developer</p>
 
-  <!-- 3. ИГРОВЫЕ КНОПКИ (STEAM И DISCORD) -->
   <a href="https://steamcommunity.com" target="_blank">
     <img src="https://shields.io" alt="Steam" />
   </a>
@@ -21,14 +17,12 @@
   <hr width="50%">
   <br>
 
-  <!-- 4. КАРТОЧКА STEAM (ЧЕРЕЗ ТАБЛИЦУ, КОТОРУЮ РАЗРЕШАЕТ GITHUB) -->
   <table border="1" cellspacing="0" cellpadding="15" width="500" style="border-color: #3a3f47;">
     <tr>
       <td bgcolor="#171a21" align="left">
         <font color="#66c0f4" size="2"><b>НЕДАВНЯЯ АКТИВНОСТЬ В STEAM</b></font>
         <br><br>
         <!-- STEAM_STATUS:START -->
-        <!-- Скрипт заменит эту строку -->
         <font color="#8b929a">⏳ Ожидание первого запуска скрипта...</font>
         <!-- STEAM_STATUS:END -->
       </td>
@@ -41,7 +35,6 @@
 
 </div>
 
-<!-- 5. БЛОК С ТЕХНОЛОГИЯМИ (ДВЕ КОЛОНКИ НА ТАБЛИЦАХ) -->
 <table width="100%" border="0" cellpadding="10">
   <tr>
     <td width="50%" bgcolor="#1f232a" valign="top">
