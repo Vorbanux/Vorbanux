@@ -5,8 +5,8 @@ STEAM_API_KEY = os.getenv("STEAM_API_KEY")
 STEAM_ID = os.getenv("STEAM_ID")
 
 def get_steam_profile_and_game():
-    profile_url = f"http://steampowered.com{STEAM_API_KEY}&steamids={STEAM_ID}"
-    game_url = f"http://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
+    profile_url = f"https://steampowered.com{STEAM_API_KEY}&steamids={STEAM_ID}"
+    game_url = f"https://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
     
     username = "Vorbanux"
     avatar_url = "steam_avatar.jpg"
