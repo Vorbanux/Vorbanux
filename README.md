@@ -1,16 +1,20 @@
-## Hi there 👋
+# Привет! Я разработчик 👋
 
-<!--
-**Vorbanux/Vorbanux** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Добро пожаловать в мой профиль. Я занимаюсь программированием и созданием игровых проектов.
 
-Here are some ideas to get you started:
+### 🛠️ Мой стек технологий
+* **Бэкенд:** Python
+* **Фронтенд:** HTML, CSS, JavaScript
+* **Геймдев:** Lua, Unreal Engine 5 (C++ / Blueprints), Roblox Studio
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🎮 Моя активность в Steam
+<!-- STEAM_STATUS:START -->
+<!-- Скрипт автоматически заменит эту строку на ваш статус из Steam -->
+<!-- STEAM_STATUS:END -->
+
+---
+
+### 📂 Мои проекты
+*Здесь в будущем вы сможете разместить ссылки на ваши лучшие репозитории.*
