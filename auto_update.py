@@ -1,40 +1,19 @@
 import os
-import request
+import requests
 
-Steam64ID = os.getenv("MY_STEAM_64ID")
-SteamAPI = os.getenv("MY_STEAM_API")
-
-def get_Steam_data():
-   url = f"http://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
-  try:
-    response = requests.get(url).json()
-    if "games" in response.get("response", {}):
-            game = response["response"]["games"] 
-            game_name = game["name"]
-            playtime_2weeks = round(game["playtime_2weeks"] / 60, 1) 
-            
-            # Возвращаем простой HTML, который гарантированно пропустит защита GitHub
-            return f"""
-        <font color="#8b929a" size="3">В сети и играет в:</font><br>
-        <font color="#ffffff" size="4"><b>🕹️ {game_name}</b></font><br>
-        <font color="#54585f" size="2">{playtime_2weeks} ч. за последние 2 недели</font>
-"""
-  except Exception as e:
-    print(f"Ошибка при запросе к Steam API: {e}")
-
-  return "<div align='center'>💤 не в сети</div>"
+STEAM_API_KEY = os.getenv("STEAM_API_KEY")
+STEAM_ID = os.getenv("STEAM_ID")
 
 def update_readme(status_html):
     with open("README.md", "r", encoding="utf-8") as f:
         readme = f.read()
-   
+
     start_marker = "<!-- STEAM_STATUS:START -->"
     end_marker = "<!-- STEAM_STATUS:END -->"
     
     start_pos = readme.find(start_marker)
     end_pos = readme.find(end_marker)
     
-    # Если маркеры успешно найдены в файле README.md
     if start_pos != -1 and end_pos != -1:
         new_readme = (
             readme[:start_pos + len(start_marker)] 
@@ -43,11 +22,76 @@ def update_readme(status_html):
         )
         with open("README.md", "w", encoding="utf-8") as f:
             f.write(new_readme)
-    else:
-        print("Ошибка: Маркеры не найдены в README.md! Проверьте разметку.")
+
 if __name__ == "__main__":
     if STEAM_API_KEY and STEAM_ID:
-        current_status = get_steam_data()
-        update_readme(current_status)
-    else:
-        print("Ошибка: Переменные окружения STEAM_API_KEY или STEAM_ID не найдены.")
+        status_html = get_steam_profile_and_game()
+        update_readme(status_html)
+
+def get_steam_profile_and_game():
+    # 1. Ссылка для получения базовой инфы профиля (Имя, Аватар, Онлайн-статус)
+    profile_url = f"http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={STEAM_API_KEY}&steamids={STEAM_ID}"
+    # 2. Ссылка для получения текущей/недавней игры
+    game_url = f"http://steampowered.com{STEAM_API_KEY}&steamid={STEAM_ID}&format=json"
+    
+    # Дефолтные значения на случай сбоя
+    username = "Vorbanux"
+    avatar_url = "https://github.com"
+    status_text = "offline"
+    status_color = "#8b929a"
+    game_info_html = "Сейчас не в сети или играет во что-то секретное 🤫"
+
+    try:
+        # Запрашиваем информацию о профиле
+        profile_res = requests.get(profile_url).json()
+        players = profile_res.get("response", {}).get("players", [])
+        if players:
+            player = players[0]
+            username = player.get("personaname", username)
+            avatar_url = player.get("avatarfull", avatar_url) # Берем самую большую аватарку 184x184px
+            
+            # personastate: 0 - Офлайн, 1 - Онлайн, 2 - Занят, 3 - Отошел...
+            state = player.get("personastate", 0)
+            # Если игрок запустил игру, поле "gameextrainfo" появляется автоматически
+            if "gameextrainfo" in player:
+                status_text = "в игре"
+                status_color = "#90ba3c" # Фирменный зеленый цвет Steam для тех кто в игре
+            elif state > 0:
+                status_text = "в сети"
+                status_color = "#57cbde" # Голубой цвет для тех, кто просто онлайн
+            else:
+                status_text = "не в сети"
+                status_color = "#8b929a"
+
+        # Запрашиваем информацию об игре
+        game_res = requests.get(game_url).json()
+        if "games" in game_res.get("response", {}):
+            game = game_res["response"]["games"][0]
+            game_name = game["name"]
+            playtime_2weeks = round(game["playtime_2weeks"] / 60, 1)
+            game_info_html = f"🕹️ <b>{game_name}</b> ({playtime_2weeks} ч. за 2 недели)"
+
+    except Exception as e:
+        print(f"Ошибка API: {e}")
+
+    # Собираем красивую верстку, которая вставится в таблицу README
+    return f"""
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <!-- Аватарка из Steam -->
+    <td width="120" valign="top">
+      <img src="{avatar_url}" width="100" height="100" style="border: 2px solid {status_color}; border-radius: 4px;" />
+    </td>
+    <!-- Имя, Статус и Игра -->
+    <td valign="top">
+      <font size="5" color="#ffffff"><b>{username}</b></font> 
+      &nbsp;&nbsp;
+      <font size="2" color="{status_color}">● {status_text}</font>
+      <br><br>
+      <font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br>
+      <font size="3" color="#66c0f4">{game_info_html}</font>
+    </td>
+  </tr>
+</table>
+"""
+
