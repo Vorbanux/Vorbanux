@@ -1,7 +1,7 @@
 <div align="center">
   <img src="image.png" width="100%" alt="Banner" />
   <hr width="50%">
-  <h1>Backend Engineer & Game Developer</h1>
+  <h1>Backend Engineer</h1>
 </div>
 
 # Hi there, I'm Andrey! 👋
