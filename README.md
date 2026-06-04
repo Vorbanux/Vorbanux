@@ -7,7 +7,7 @@
 # Hi there, I'm Andrey! 👋
 
 ### 🛠️ About Me
--
+I'm 16 years old. I've been programming for four years now and created a GitHub account to share my repositories and open-source projects
 
 ---
 
@@ -19,9 +19,9 @@
 ---
 
 ### 🎯 What I Can Do For Your Business / Project
-* 🔌 **Advanced API Integration:** -
-* 🛡️ **Data Processing & Security:** -
-* 📦 **Modular Architecture:** -
+* 🔌 **Advanced API Integration:** I have experience working with APIs, having integrated the Steam, Telegram, and Discord APIs
+* 🛡️ **Data Processing & Security:** I can protect code from basic attacks; I'm still learning cybersecurity, but I will optimize and protect code to the best of my ability
+* 📦 **Modular Architecture:** My code is easy to maintain; I'll leave comments on important parts of the file, clearly name files, variables, functions, and classes, and use OOP and a simple, clear architecture
 
 ---
 
@@ -48,14 +48,6 @@
 ---
 
 ### 📫 Connect with me
-* ✈️ **Telegram:** -
-* 📧 **Email:** -
+* 📧 **Email:** vorbanux.devgithub@gmail.com
 * 💼 **Freelance Profile:** -
-
----
-
-<p align="center">
-  <!-- Инфографика твоей статистики GitHub, она будет обновляться автоматически -->
-  <img src="https://vercel.app" alt="Vorbanux GitHub Stats" />
-</p>
 
