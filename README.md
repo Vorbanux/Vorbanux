@@ -1,12 +1,7 @@
 <div align="center">
   <img src="image.png" width="100%" alt="Banner" />
-  <br>
-  <h1>Backend Engineer & Game Developer</h1>
-
-  <br><br>
   <hr width="50%">
-  <br>
-
+  <h1>Backend Engineer & Game Developer</h1>
 </div>
 
 # Hi there, I'm Andrey! 👋
@@ -35,27 +30,27 @@
 <!-- КЕЙС 1: Твой проект шифрования картинок -->
 #### 🔒 [image-encryption](https://github.com)
 * **Description:** [Краткое описание на английском: что делает проект и какую задачу решает]
-* **Key Tech:** [Какие технологии использовал, например: Python, Pillow, Custom Algorithms]
+* **Key Tech:** Python with libs: os, shutil, pillow
 * **What it proves:** [Какой твой навык это доказывает, например: Demonstrates pixel-level data manipulation and algorithmic thinking]
 
 <!-- КЕЙС 2: Твоя библиотека модулей -->
 #### 📦 [module-lib](https://github.com)
-* **Description:** [Краткое описание проекта]
-* **Key Tech:** [Технологии, например: Pure Python, OOP, Modular Design]
-* **What it proves:** [Что доказывает, например: Showcases ability to write clean, PEP 8-compliant, and highly reusable backend code]
+* **Description:** Matrix instantiation and standard matrix functions, including the Gauss method
+* **Key Tech:** Python with sys lib, OOP
+* **What it proves:** Demonstrates my knowledge of higher linear algebra and my ability to write clean code using OOP
 
 <!-- КЕЙС 3: Твой будущий 3D движок (можешь оставить как анонс "In Progress") -->
-#### 🌐 [ИМЯ_БУДУЩЕГО_РЕПО_ДВИЖКА] *(In Progress)*
-* **Description:** [Опиши задумку: 3D wireframe graphics engine built from scratch]
-* **Key Tech:** [Например: Python, NumPy (C-powered arrays), Pygame]
-* **What it proves:** [Например: Deep dive into 3D computer graphics pipelines, linear algebra, and performance optimization]
+#### 🌐 3d-pyengine *(In Progress)*
+* **Description:** 3D wireframe graphics engine built from scratch
+* **Key Tech:** Python with libs: Numpy, pygame, etc.
+* **What it proves:** Deep dive into 3D computer graphics pipelines
 
 ---
 
 ### 📫 Connect with me
-* ✈️ **Telegram:** [@твой_юзернейм или ссылка на аккаунт]
-* 📧 **Email:** [Твой профессиональный Email для связи]
-* 💼 **Freelance Profile:** [Ссылка на твой Kwork или другую биржу, если уже создал]
+* ✈️ **Telegram:** -
+* 📧 **Email:** -
+* 💼 **Freelance Profile:** -
 
 ---
 
