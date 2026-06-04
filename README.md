@@ -7,7 +7,7 @@
 # Hi there, I'm Andrey! 👋
 
 ### 🛠️ About Me
-[Напиши здесь 2-3 предложения о себе на английском. Например: кто ты, чем увлекаешься в программировании, какую цель преследуешь на фрилансе и над какими задачами тебе больше всего нравится работать]
+-
 
 ---
 
@@ -19,9 +19,9 @@
 ---
 
 ### 🎯 What I Can Do For Your Business / Project
-* 🔌 **Advanced API Integration:** [Опиши свой опыт интеграции сторонних сервисов, упомяни работу со сложным Steam API и как этот навык масштабируется на платежные шлюзы или CRM]
-* 🛡️ **Data Processing & Security:** [Напиши, как ты умеешь защищать, шифровать или парсить данные без потери производительности]
-* 📦 **Modular Architecture:** [Объясни, почему твой код легко поддерживать — благодаря созданию чистых, переиспользуемых модулей и библиотек]
+* 🔌 **Advanced API Integration:** -
+* 🛡️ **Data Processing & Security:** -
+* 📦 **Modular Architecture:** -
 
 ---
 
@@ -29,9 +29,9 @@
 
 <!-- КЕЙС 1: Твой проект шифрования картинок -->
 #### 🔒 [image-encryption](https://github.com)
-* **Description:** [Краткое описание на английском: что делает проект и какую задачу решает]
+* **Description:** Encrypts the message in the image and can also decrypt it. Uses the LSB method
 * **Key Tech:** Python with libs: os, shutil, pillow
-* **What it proves:** [Какой твой навык это доказывает, например: Demonstrates pixel-level data manipulation and algorithmic thinking]
+* **What it proves:** Ability to work with images, knowledge of the basics of fundamental computer science, and the ability to encode symbols into binary code
 
 <!-- КЕЙС 2: Твоя библиотека модулей -->
 #### 📦 [module-lib](https://github.com)
