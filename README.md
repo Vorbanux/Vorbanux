@@ -3,44 +3,64 @@
   <br>
   <h1>Backend Engineer & Game Developer</h1>
 
-
-  <table border="1" cellspacing="0" cellpadding="15" width="500" style="border-color: #3a3f47;">
-    <tr>
-      <td bgcolor="#171a21" align="left">
-        <font color="#66c0f4" size="2"><b>Steam</b></font>
-        <br><br>
-        <!-- STEAM_STATUS:START -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="120" valign="top"><img src="https://avatars.steamstatic.com/7462fa80d4fb5547009a341e43da32f9c14fe8c6_full.jpg" width="100" height="100" style="border: 2px solid #8b929a; border-radius: 4px;" onerror="this.onerror=null;this.src='steam_avatar.jpg';" /></td><td valign="top"><font size="5" color="#ffffff"><b>130kmpeek(Vorbanux)</b></font>&nbsp;&nbsp;<font size="2" color="#8b929a">● offline</font><br><br><font size="2" color="#8b929a">АКТИВНОСТЬ:</font><br><font size="3" color="#66c0f4">🕹️ <b>Counter-Strike 2</b> (29.9 ч. за 2 недели)</font></td></tr></table>
-<!-- STEAM_STATUS:END -->
-      </td>
-    </tr>
-  </table>
-
   <br><br>
   <hr width="50%">
   <br>
 
 </div>
-<table width="100%" border="0" cellpadding="10" align="center">
-  <tr>
-    <td width="50%" bgcolor="#1f232a" valign="top">
-      <h3><font color="#66c0f4">🚀  Языки Программирования</font></h3>
-      <ul>
-        <li><b>Python</b></li>
-        <li><b>Lua</b></li>
-        <li><b>C++</b></li>
-        <li><b>JavaScript</b></li>
-        <li><b>HTML5</b></li>
-        <li><b>CSS3</b></li>
-      </ul>
-    </td>
-    <td width="50%" bgcolor="#1f232a" valign="top">
-      <h3><font color="#47a450">🎮 Game Development</font></h3>
-      <ul>
-        <li><b>Unreal Engine 5</b> (Blueprints, Python API)</li>
-        <li><b>Lua Скриптинг</b> (Игровые системы)</li>
-        <li>Roblox Studio / Интеграция API</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+
+# Hi there, I'm Andrey! 👋
+
+### 🛠️ About Me
+[Напиши здесь 2-3 предложения о себе на английском. Например: кто ты, чем увлекаешься в программировании, какую цель преследуешь на фрилансе и над какими задачами тебе больше всего нравится работать]
+
+---
+
+### 🚀 Tech Stack & Skills
+* 🐍 **Languages:** Python, JavaScript, Lua
+* ⚙️ **Backend Tools:** NumPy, FastAPI, Aiogram, Pillow, Pygame, Telebot, Request, Tkinter
+* 🎯 **Core Expertise:** API Integration, Create Hard Logics, OOP, Work with Images
+
+---
+
+### 🎯 What I Can Do For Your Business / Project
+* 🔌 **Advanced API Integration:** [Опиши свой опыт интеграции сторонних сервисов, упомяни работу со сложным Steam API и как этот навык масштабируется на платежные шлюзы или CRM]
+* 🛡️ **Data Processing & Security:** [Напиши, как ты умеешь защищать, шифровать или парсить данные без потери производительности]
+* 📦 **Modular Architecture:** [Объясни, почему твой код легко поддерживать — благодаря созданию чистых, переиспользуемых модулей и библиотек]
+
+---
+
+### 📂 Featured Repositories
+
+<!-- КЕЙС 1: Твой проект шифрования картинок -->
+#### 🔒 [image-encryption](https://github.com)
+* **Description:** [Краткое описание на английском: что делает проект и какую задачу решает]
+* **Key Tech:** [Какие технологии использовал, например: Python, Pillow, Custom Algorithms]
+* **What it proves:** [Какой твой навык это доказывает, например: Demonstrates pixel-level data manipulation and algorithmic thinking]
+
+<!-- КЕЙС 2: Твоя библиотека модулей -->
+#### 📦 [module-lib](https://github.com)
+* **Description:** [Краткое описание проекта]
+* **Key Tech:** [Технологии, например: Pure Python, OOP, Modular Design]
+* **What it proves:** [Что доказывает, например: Showcases ability to write clean, PEP 8-compliant, and highly reusable backend code]
+
+<!-- КЕЙС 3: Твой будущий 3D движок (можешь оставить как анонс "In Progress") -->
+#### 🌐 [ИМЯ_БУДУЩЕГО_РЕПО_ДВИЖКА] *(In Progress)*
+* **Description:** [Опиши задумку: 3D wireframe graphics engine built from scratch]
+* **Key Tech:** [Например: Python, NumPy (C-powered arrays), Pygame]
+* **What it proves:** [Например: Deep dive into 3D computer graphics pipelines, linear algebra, and performance optimization]
+
+---
+
+### 📫 Connect with me
+* ✈️ **Telegram:** [@твой_юзернейм или ссылка на аккаунт]
+* 📧 **Email:** [Твой профессиональный Email для связи]
+* 💼 **Freelance Profile:** [Ссылка на твой Kwork или другую биржу, если уже создал]
+
+---
+
+<p align="center">
+  <!-- Инфографика твоей статистики GitHub, она будет обновляться автоматически -->
+  <img src="https://vercel.app" alt="Vorbanux GitHub Stats" />
+</p>
+
