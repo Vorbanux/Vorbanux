@@ -40,7 +40,7 @@ I'm 16 years old. I've been programming for four years now and created a GitHub 
 * **What it proves:** Demonstrates my knowledge of higher linear algebra and my ability to write clean code using OOP
 
 <!-- КЕЙС 3: Твой будущий 3D движок (можешь оставить как анонс "In Progress") -->
-#### 🌐 [3d-pyengine](https://github.com/Vorbanux/image-encryption)
+#### 🌐 [3d-pyengine](https://github.com/Vorbanux/3d-pyengine)
 * **Description:** 3D wireframe graphics engine built from scratch
 * **Key Tech:** Python with libs: Numpy, pygame, etc.
 * **What it proves:** Deep dive into 3D computer graphics pipelines
