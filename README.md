@@ -28,7 +28,7 @@ I'm 16 years old. I've been programming for four years now and created a GitHub 
 ### 📂 Featured Repositories
 
 <!-- КЕЙС 1: Твой проект шифрования картинок -->
-#### 🔒 [image-encryption](https://github.com)
+#### 🔒 [image-encryption](https://github.com/Vorbanux/image-encryption)
 * **Description:** Encrypts the message in the image and can also decrypt it. Uses the LSB method
 * **Key Tech:** Python with libs: os, shutil, pillow
 * **What it proves:** Ability to work with images, knowledge of the basics of fundamental computer science, and the ability to encode symbols into binary code
