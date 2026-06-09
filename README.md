@@ -49,5 +49,5 @@ I'm 16 years old. I've been programming for four years now and created a GitHub 
 
 ### 📫 Connect with me
 * 📧 **Email:** vorbanux.devgithub@gmail.com
-* 💼 **Freelance Profile:** -
+* 💼 **Freelance Profile:** [Kwork](https://kwork.ru/user/vorbanux)
 
