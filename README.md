@@ -34,7 +34,7 @@ I'm 16 years old. I've been programming for four years now and created a GitHub 
 * **What it proves:** Ability to work with images, knowledge of the basics of fundamental computer science, and the ability to encode symbols into binary code
 
 <!-- КЕЙС 2: Твоя библиотека модулей -->
-#### 📦 [tg-bot](https://github.com/Vorbanux/tg-bot)
+#### ⚙ [tg-bot](https://github.com/Vorbanux/tg-bot)
 * **Description:** A Telegram bot that parses websites and sends texts to a database
 * **Key Tech:** Python with libs: telebot, requests, sqlite3, time, threading, bs4, hashlib, os
 * **What it proves:** Demonstrates the ability to parse websites, create Telegram bots, and work with databases
