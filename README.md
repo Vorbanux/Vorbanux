@@ -7,7 +7,7 @@
 # Hi there, I'm Andrey! 👋
 
 ### 🛠️ About Me
-I'm 16 years old. I've been programming for four years now and created a GitHub account to share my repositories and open-source projects
+I'm 17 years old. I've been programming for four years now and created a GitHub account to share my repositories and open-source projects
 
 ---
 
